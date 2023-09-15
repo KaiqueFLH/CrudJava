@@ -8,4 +8,12 @@ public class JogadorFutebol extends Profissao {
         this.patrocinador = patrocinador;
         this.quantidadeGols = quantidadeGols;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() +
+                "patrocinador='" + patrocinador + '\'' +
+                ", quantidadeGols=" + quantidadeGols +
+                '}';
+    }
 }

@@ -25,13 +25,15 @@ public class BancoDeDadosMovel implements ICrud<Integer, Movel>{
     }
 
     @Override
-    public Movel update() {
-        return null;
+    public Movel update(Movel movelNovo,Integer idAntigo) {
+        movelNovo.setId(idAntigo);
+        moveis.set(idAntigo,movelNovo);
+        return movelNovo;
     }
 
     @Override
     public Movel delete(Integer integer) {
-        moveis.remove(moveis.get(integer).id);
+        moveis.remove(moveis.get(integer).getId());
         return null;
 
     }

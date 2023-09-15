@@ -8,7 +8,7 @@ public interface ICrud<ID, E> {
 
     ArrayList<E> readAll();
 
-    E update();
+    E update(E element, ID id);
 
     E delete(ID id);
 

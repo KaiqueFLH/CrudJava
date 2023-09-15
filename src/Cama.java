@@ -11,12 +11,9 @@ public class Cama extends Movel {
     @Override
     public String toString() {
         return "Cama{" +
+                super.toString()+
                 "estaArrumada=" + estaArrumada +
                 ", quantidadeTravesseiros=" + quantidadeTravesseiros +
-                ", id=" + id +
-                ", comprimentoEmCm=" + comprimentoEmCm +
-                ", preco=" + preco +
-                ", material='" + material + '\'' +
                 '}';
     }
 }

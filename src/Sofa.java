@@ -1,6 +1,6 @@
 public class Sofa extends Movel {
-    int quantidadeLugares;
-    boolean temApoioDeBraco;
+    private int quantidadeLugares;
+    private boolean temApoioDeBraco;
 
     public Sofa(double comprimentoEmCm, double preco, String material, int quantidadeLugares) {
         super(comprimentoEmCm, preco, material);
@@ -11,10 +11,7 @@ public class Sofa extends Movel {
     @Override
     public String toString() {
         return "Sofa{" +
-                "id=" + id +
-                ", comprimentoEmCm=" + comprimentoEmCm +
-                ", preco=" + preco +
-                ", material='" + material + '\'' +
+                super.toString()+
                 ", quantidadeLugares=" + quantidadeLugares +
                 ", temApoioDeBraco=" + temApoioDeBraco +
                 '}';

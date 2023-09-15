@@ -9,8 +9,9 @@ public class BancoDeDadosProfissao implements ICrud<Integer,Profissao>{
     }
 
     @Override
-    public Profissao create(Profissao element) {
-        return null;
+    public Profissao create(Profissao profissao) {
+        profissoes.add(profissao);
+        return profissao;
     }
 
     @Override
@@ -20,17 +21,19 @@ public class BancoDeDadosProfissao implements ICrud<Integer,Profissao>{
 
     @Override
     public ArrayList<Profissao> readAll() {
-        return null;
+        return profissoes;
     }
 
     @Override
-    public Profissao update() {
-        return null;
+    public Profissao update(Profissao profissaoNova,Integer idAntigo) {
+        profissaoNova.setId(idAntigo);
+        profissoes.set(idAntigo,profissaoNova);
+        return profissaoNova;
     }
 
     @Override
     public Profissao delete(Integer integer) {
-        profissoes.remove(profissoes.get(integer).id);
+        profissoes.remove(profissoes.get(integer).getId());
         return null;
 
     }
